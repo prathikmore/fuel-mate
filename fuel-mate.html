@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Sharing App - Fuel Mate</title>
+    <link rel="stylesheet" href="fuel-mate.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="https://i.ibb.co/CK5xFBs/1730746923591.jpg" alt="Fuel Mate Logo" class="logo">
+            <h1>Share Your Ride</h1>
+        </header>
+        
+        <div class="input-section">
+            <h2>Find Someone to Share Fuel Costs</h2>
+            <form id="rideForm">
+                <label for="location">Your Destination:</label>
+                <input type="text" id="location" placeholder="Enter destination" required>
+
+                <label for="distance">Distance (km):</label>
+                <input type="number" id="distance" placeholder="Enter distance" required>
+
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" value="1" min="1" required>
+
+                <button type="button" onclick="calculateAndShowMatches()">Find Matches</button>
+            </form>
+        </div>
+
+        <!-- Matches Section: Initially hidden -->
+        <div id="matches-section" style="display: none;">
+            <h2>Available Matches</h2>
+            <div id="matches"></div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Fuel Mate. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="fuel-mate.js"></script>
+</body>
+</html>
